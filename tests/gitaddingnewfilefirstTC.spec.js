@@ -19,7 +19,7 @@ async function gmailLogin(page, username, password) {
 }
 
 (async () => {
-    const credentials = await getCredentialsFromCSV('./credentials.csv');
+    const credentials = await getCredentialsFromCSV('./testdataconfig.properties/credentials.csv');
     const browser = await chromium.launch({ headless: false });
     const page = await browser.newPage();
     await gmailLogin(page, credentials.username, credentials.password);
